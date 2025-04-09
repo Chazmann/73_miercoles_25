@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Hace que el padding no afecte al tamaño de la tarjeta */
+}
+
+body{
+    height: 100vh;/* Alto del body, unidad viewport height, solo utilizar en BODY*/
+    background-color: #444444; /* Gris oscuro */
+}
+.tarjeta{
+    
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  color: red; /* Hace que el padding no afecte al tamaño de la tarjeta */
+ display: flex;
+ flex-direction: column;
+ gap: 10px; /* Espacio entre los elementos de la tarjeta */
+
+ border-right: dashed 10px yellow;
+ border-top: dashed 10px yellow;
+}
+.cabecera{
+    background-color: #7040DF;
+    height: 100%;
+    width: 100%;
+    color: white; /* !important hace que el color sea prioritario */
+    text-align: center;
+}
+.data{
+    background-color: white;
+}
+
+
