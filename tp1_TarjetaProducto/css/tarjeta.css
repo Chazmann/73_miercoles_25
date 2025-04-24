@@ -1,17 +1,34 @@
+@import url('../../assets/css/fawesome-all.css');
+
 * {
     box-sizing: border-box;
     /* Hace que el padding no afecte al tamaño de la tarjeta */
     /* Se aplica a todos los elementos de la página */
     margin: 0;
     padding: 0;
+    list-style: none;
 
 }
 
 body {
+
     background-color: beige;
-display: grid;
-place-items: center;
+    display: grid;
+    place-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: .5em;
+}
+
+
+.cuadro1{
+    background-color: steelblue;
+    height: 5em;
+    width: 5em;
+}
+.cuadro2{
+    background-color: rgb(180, 70, 165);
+    height: 5rem;
+    width: 5rem;
 }
 
 img {
@@ -22,7 +39,7 @@ img {
 }
 
 .producto {
-    width: 300px;
+    width: 100%;
     height: 120px;
     background-color: steelblue;
     color: white;
@@ -35,11 +52,19 @@ img {
 }
 
 .producto:nth-child(odd) {
+    /* Selecciona los elementos impares */
+    background-color: rgb(16, 211, 61);
+    flex-direction: row-reverse;
+}
+
+
+
+/* .producto:nth-child(odd) {
     background-color: transparent;
     box-shadow: 2px -2px 0px 5px rgba(203, 77, 77, 0.5);
     color: gray ;
     flex-direction: row-reverse;
-}
+} */
 
 .fotoProducto {
     /* height: 80px;  */
@@ -80,8 +105,80 @@ img {
 }
 
 
-.columna{
+.contenedorProductos {
     display: flex;
     flex-direction: column;
     gap: 0.7em;
+    width: 100%;
+}
+
+
+/* -------------menu desplegable------------------ */
+header {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.buscadorCarrito{
+    display: flex;
+    gap: 0.5em;
+}
+header button{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+header button:hover{
+    color: steelblue;
+    text-shadow: 0px 0px 5px rgba(128, 128, 128, 0.473)
+}
+
+.logo{
+    font-size: 1.25em;
+}
+
+.buscador input{
+    display: none;
+}
+
+
+.d-none{
+    display: none;
+}
+
+.cuadro1{
+    background-color: steelblue;
+    height: 5em;
+    width: 5em;
+}
+.cuadro2{
+    background-color: rgb(180, 70, 165);
+    height: 5rem;
+    width: 5rem;
+}
+
+.categoriaRopa{
+    display: flex;
+    gap: 1em;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.categoriaRopa li{
+    font-size: 1.5em;
+    cursor: pointer;
+    flex: 0 0 150px;
+    background-color: rgb(172, 174, 175);
 }
